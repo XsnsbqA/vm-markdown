@@ -17,7 +17,7 @@
     
   </div>
 </template>
-<style lang="scss">
+<style lang="scss" rel="stylesheet/scss">
   @import url('../assets/iconfont/iconfont.css');
   // @import url('//at.alicdn.com/t/font_395110_atvjh67aqsuzyqfr.css');
   .vm-markdown{
@@ -284,6 +284,9 @@ export default {
     getHtml () {
       let html = document.querySelector('.vm-markdown-html')
       this.$emit('gethtml', html.innerHTML)
+    },
+    getText () {
+      this.$emit('gettext', this.markdString)
     }
   },
   watch: {
@@ -302,7 +305,8 @@ export default {
 
       setTimeout(()=>{
         this.parseHtml()
-        this.getHtml()
+//        this.getHtml()
+        this.getText()
       },0)
     }
   },
