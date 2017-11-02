@@ -305,7 +305,7 @@ export default {
 
       setTimeout(()=>{
         this.parseHtml()
-//        this.getHtml()
+        this.getHtml()
         this.getText()
       },0)
     }
