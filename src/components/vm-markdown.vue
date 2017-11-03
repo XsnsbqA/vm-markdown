@@ -199,6 +199,7 @@
         let VmMarkdownLayout = document.querySelectorAll('.vm-markdown-layout')[this.id]
         let VmMarkdown = document.querySelectorAll('.vm-markdown')[this.id]
         let VmMarkdownEdit = document.querySelectorAll('.vm-markdown-edit')[this.id]
+        let VmMarkdownArea = document.querySelectorAll('.vm-markdown-content')[this.id]
         let is = VmMarkdownLayout.querySelectorAll('i')
         if(this.layout){
           switch (this.layout) {
@@ -237,13 +238,16 @@
             is[i].addEventListener('click', evt => {
               switch (is[i].dataset.layout) {
                 case 'default' :
+                  VmMarkdownArea.style.display = 'display'
                   VmMarkdownEdit.style.width = '50%'
                   break;
                 case 'right' :
+                  VmMarkdownArea.style.display = 'display'
                   VmMarkdownEdit.style.width = '100%'
                   break;
                 case 'left' :
                   VmMarkdownEdit.style.width = '0'
+                  VmMarkdownArea.style.display = 'none'
                   break;
                 case 'zoom' :
                   if (VmMarkdown.style.position === 'fixed') {
