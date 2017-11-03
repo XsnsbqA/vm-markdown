@@ -11,11 +11,11 @@
         >
         </VmMarkdownMenu>
         <div class="content" >
-            <div class="vm-markdown-edit" :style="{backgroundColor: themeValue.bgLeft}">
+            <div class="vm-markdown-edit" :style="{backgroundColor: themeValue.bgRight}">
             <!--<div class="vm-markdown-edit" :style="{backgroundColor: themeValue.bgRight}">-->
                 <textarea v-if="height!='0'" class="vm-markdown-content" v-model="markdString" :placeholder="placeholder"></textarea>
             </div>
-            <div class="vm-markdown-html" v-html="htmlString" :style="{backgroundColor: themeValue.bgRight}">
+            <div class="vm-markdown-html" v-html="htmlString" :style="{backgroundColor: themeValue.bgleft}">
             </div>
         </div>
 
@@ -199,7 +199,6 @@
         let VmMarkdownLayout = document.querySelectorAll('.vm-markdown-layout')[this.id]
         let VmMarkdown = document.querySelectorAll('.vm-markdown')[this.id]
         let VmMarkdownEdit = document.querySelectorAll('.vm-markdown-edit')[this.id]
-        let VmMarkdownArea = document.querySelectorAll('.vm-markdown-content')[this.id]
         let is = VmMarkdownLayout.querySelectorAll('i')
         if(this.layout){
           switch (this.layout) {
@@ -238,16 +237,13 @@
             is[i].addEventListener('click', evt => {
               switch (is[i].dataset.layout) {
                 case 'default' :
-                  VmMarkdownArea.style.display = 'display'
                   VmMarkdownEdit.style.width = '50%'
                   break;
                 case 'right' :
-                  VmMarkdownArea.style.display = 'display'
                   VmMarkdownEdit.style.width = '100%'
                   break;
                 case 'left' :
-                  VmMarkdownEdit.style.width = '0'
-                  VmMarkdownArea.style.display = 'hidden'
+                  VmMarkdownEdit.style.width = 'auto'
                   break;
                 case 'zoom' :
                   if (VmMarkdown.style.position === 'fixed') {
