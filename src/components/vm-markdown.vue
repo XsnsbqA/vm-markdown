@@ -15,7 +15,7 @@
             <!--<div class="vm-markdown-edit" :style="{backgroundColor: themeValue.bgRight}">-->
                 <textarea v-if="height!='0'" class="vm-markdown-content" v-model="markdString" :placeholder="placeholder"></textarea>
             </div>
-            <div class="vm-markdown-html" v-html="htmlString" :style="{backgroundColor: themeValue.bgleft}">
+            <div class="vm-markdown-html" v-html="htmlString" :style="{backgroundColor: themeValue.bgLeft}">
             </div>
         </div>
 
@@ -199,6 +199,7 @@
         let VmMarkdownLayout = document.querySelectorAll('.vm-markdown-layout')[this.id]
         let VmMarkdown = document.querySelectorAll('.vm-markdown')[this.id]
         let VmMarkdownEdit = document.querySelectorAll('.vm-markdown-edit')[this.id]
+        let VmMarkdownArea = document.querySelectorAll('.vm-markdown-content')[this.id]
         let is = VmMarkdownLayout.querySelectorAll('i')
         if(this.layout){
           switch (this.layout) {
@@ -237,13 +238,16 @@
             is[i].addEventListener('click', evt => {
               switch (is[i].dataset.layout) {
                 case 'default' :
+                  VmMarkdownArea.style.width = '100%'
                   VmMarkdownEdit.style.width = '50%'
                   break;
                 case 'right' :
+                  VmMarkdownArea.style.width = '100%'
                   VmMarkdownEdit.style.width = '100%'
                   break;
                 case 'left' :
                   VmMarkdownEdit.style.width = 'auto'
+                  VmMarkdownArea.style.display = 'hidden'
                   break;
                 case 'zoom' :
                   if (VmMarkdown.style.position === 'fixed') {
