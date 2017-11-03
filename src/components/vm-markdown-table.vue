@@ -1,5 +1,5 @@
 <template>
-  <VmMarkdownDropdown>
+  <VmMarkdownDropdown :id="id">
     <ul class="vm-markdown-table">
     </ul>
   </VmMarkdownDropdown>
@@ -39,11 +39,14 @@ export default {
     hoverColor: {
       type: String,
       default: '#232323'
+    },
+    id:{
+      type:String
     }
   },
   methods: {
     insertText (string) {
-      let content = document.querySelector('.vm-markdown-content')
+      let content = document.querySelectorAll('.vm-markdown-content')[this.id]
       insertText(content, string)
       this.$emit('textChange', content.value)
     }

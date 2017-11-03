@@ -192,10 +192,8 @@
       }
     },
     methods: {
-      updateHtmlString (data , id) {
-        if(this.id == id){
-          this.markdString = data
-        }
+      updateHtmlString (data) {
+        this.markdString = data
       },
       layoutControl () {
         let VmMarkdownLayout = document.querySelectorAll('.vm-markdown-layout')[this.id]
@@ -336,7 +334,7 @@
               border-right: 1px solid #eee;
             `
         }
-        let html = document.getElementsByClassName('vm-markdown-html')[this.id]
+        let html = document.getElementsByClassName('vm-markdown-html')[0]
         let tagNames = Object.keys(style)
         for (let i = 0; i < tagNames.length; i++) {
           let _tagNames = html.getElementsByTagName(tagNames[i])

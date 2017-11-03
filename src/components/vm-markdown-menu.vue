@@ -33,6 +33,7 @@
       <!--<VmMarkdownButton icon="iconfont icon-code" @click.native="insertText('```\nCode\n```\n')"></VmMarkdownButton>-->
       <VmMarkdownButton icon="iconfont icon-table">
         <VmMarkdownTable :hoverColor="bgMenu"
+                         :id="id"
                          @textChange="uploadTable">
         </VmMarkdownTable>
       </VmMarkdownButton>
@@ -139,7 +140,7 @@ export default {
       this.$emit('textChange', content.value)
     },
     uploadTable(content){
-      this.$emit('textChange', content ,this.id)
+      this.$emit('textChange', content)
     }
   },
   mounted () {
