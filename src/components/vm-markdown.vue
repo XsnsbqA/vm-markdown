@@ -28,7 +28,7 @@
         background-color: white;
         border-radius: 4px;
         min-width: 600px;
-        min-height: 350px;
+        min-height: 100px;
         overflow: hidden;
         .content {
             display: flex;
@@ -51,7 +51,7 @@
                 border-right: 1px solid #eeeff1;
                 flex-shrink: 0;
                 .vm-markdown-content {
-                    width: 100%;
+                    /*width: 100%;*/
                     height: 100%;
                     padding: 15px;
                     overflow: auto;
@@ -342,6 +342,9 @@
       }
     },
     watch: {
+      defaultText:function(value){
+        this.markdString = value
+      },
       markdString(value){
         marked.setOptions({
           renderer: new marked.Renderer(),

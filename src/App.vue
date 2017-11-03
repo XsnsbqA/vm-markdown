@@ -1,28 +1,6 @@
 <template>
   <div id="app">
-    <div class="logo">
-      <svg 
-       xmlns="http://www.w3.org/2000/svg"
-       xmlns:xlink="http://www.w3.org/1999/xlink"
-       width="200px" height="174px">
-        <path fill-rule="evenodd"  fill="rgb(53, 73, 94)"
-         d="M163.335,110.425 L130.001,143.887 L130.001,143.887 L100.000,174.003 L69.999,143.887 L69.999,143.887 L34.998,108.752 L64.999,78.636 L100.000,113.771 L133.334,80.309 L163.335,110.425 Z"/>
-        <path fill-rule="evenodd"  fill="rgb(65, 184, 131)"
-         d="M170.002,103.733 L140.001,73.617 L170.002,43.500 L200.003,73.617 L170.002,103.733 ZM70.332,73.282 L135.001,8.365 L165.002,38.481 L100.333,103.398 L70.332,73.282 ZM-0.003,73.617 L73.329,0.003 L103.330,30.119 L29.998,103.733 L-0.003,73.617 Z"/>
-      </svg>
-    </div>
-    
-    <!-- <img src="./assets/logo_vmeditor.png" height="250" width="250"> -->
-    <h2 class="logo-name"><span style="color: #41b883">V</span>M Markdown</h2>
-    <p class="desc">Markdown for Vue</p>
-    <div class="themes" @click="selectTheme">
-      <span data-theme="default" style="width:28px;height:28px"></span>
-      <span data-theme="dark"></span>
-      <span data-theme="green"></span>
-      <span data-theme="gray"></span>
-      <span data-theme="princess"></span>
-    </div>
-    <h4>theme = "<span class="theme-type">default</span>"</h4>
+
 
     <VmMarkdown :theme="theme"
                 v-on:gethtml="showHtml"
