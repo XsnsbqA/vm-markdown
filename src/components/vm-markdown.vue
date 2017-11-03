@@ -13,7 +13,7 @@
         <div class="content" >
             <div class="vm-markdown-edit" :style="{backgroundColor: themeValue.bgLeft}">
             <!--<div class="vm-markdown-edit" :style="{backgroundColor: themeValue.bgRight}">-->
-                <textarea class="vm-markdown-content" v-model="markdString"></textarea>
+                <textarea v-if="height!='0'" class="vm-markdown-content" v-model="markdString" :placeholder="placeholder"></textarea>
             </div>
             <div class="vm-markdown-html" v-html="htmlString" :style="{backgroundColor: themeValue.bgRight}">
             </div>
@@ -149,7 +149,7 @@
       },
       height: {
         type: String,
-        default: '350px'
+        default: '50px'
       },
       defaultText: {
         type: String,
@@ -162,6 +162,10 @@
       editable: {
         type: Boolean,
         default: true
+      },
+      placeholder:{
+        type:String,
+        default:'新人首次沟通需填写8周计划, 以后每次沟通的时候做check, 8周计划可以在后续每周修改.转正谈话和季度谈话填写改进计划'
       },
       layout: {
         type: String,
@@ -244,7 +248,7 @@
                 case 'zoom' :
                   if (VmMarkdown.style.position === 'fixed') {
                     VmMarkdown.style.cssText = 'width:' + this.width + ';' +
-                      'height:' + this.height + ';'
+                      'height:' + this.height + ';' + 'z-index:'+ 14+';'
                     // VmMarkdown.style.position = ''
                     // VmMarkdown.style.left = ''
                     // VmMarkdown.style.top = ''
@@ -258,6 +262,7 @@
                     VmMarkdown.style.margin = '0'
                     VmMarkdown.style.width = '100%'
                     VmMarkdown.style.height = '100%'
+                    VmMarkdown.style.zIndex = 10001
                   }
                   break
               }
