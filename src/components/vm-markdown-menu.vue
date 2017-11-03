@@ -134,7 +134,7 @@ export default {
   },
   methods: {
     insertText(string){
-      let content = document.querySelector('.vm-markdown-content')
+      let content = document.querySelectorAll('.vm-markdown-content')[this.id]
       insertText(content, string)
       this.$emit('textChange', content.value)
     },
@@ -143,7 +143,7 @@ export default {
     }
   },
   mounted () {
-    let menu = document.querySelector('.vm-editor-menu')
+    let menu = document.querySelectorAll('.vm-editor-menu')[this.id]
     menu.addEventListener('mouseover', evt => {
       if (evt.target.tagName == 'I') {
         evt.target.style.color = this.hoverColor

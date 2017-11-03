@@ -42,7 +42,7 @@
             border: 1px solid #eeeff1;
             border-top: none;
             .vm-markdown-edit, .render {
-                /*height: 100%;*/
+                height: 100%;
             }
             .vm-markdown-edit {
                 width: 50%;
@@ -51,7 +51,7 @@
                 border-right: 1px solid #eeeff1;
                 flex-shrink: 0;
                 .vm-markdown-content {
-                    /*width: 100%;*/
+                    width: 100%;
                     height: 100%;
                     padding: 15px;
                     overflow: auto;
@@ -337,7 +337,7 @@
         }
       },
       getHtml () {
-        let html = document.querySelector('.vm-markdown-html')
+//        let html = document.querySelectorAll('.vm-markdown-html')[this.id]
         this.$emit('gethtml', this.markdString)
       }
     },
