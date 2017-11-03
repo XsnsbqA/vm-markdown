@@ -2,27 +2,28 @@
   <div class="vm-editor-menu"
        :style="{backgroundColor:bgMenu, color:menuColor, border:menuBorder}">
     <div class="command">
-      <VmMarkdownButton icon="iconfont icon-heading">
-        <VmMarkdownDropdown>
-          <ul class="vm-editor-ul" :style="{color: filterColor}">
-            <li @click="insertText('# Title\n')">
-              <h1>H1</h1>
-            </li>
-            <li @click="insertText('## Title\n')">
-              <h2>H2</h2>
-            </li>
-            <li @click="insertText('### Title\n')">
-              <h3>H3</h3>
-            </li>
-            <li @click="insertText('#### Title\n')">
-              <h4>H4</h4>
-            </li>
-            <li @click="insertText('##### Title\n')">
-              <h5>H5</h5>
-            </li>
-          </ul>
-        </VmMarkdownDropdown>
-      </VmMarkdownButton>
+      <!--<VmMarkdownButton icon="iconfont icon-heading">-->
+        <!--<VmMarkdownDropdown>-->
+          <!--<ul class="vm-editor-ul" :style="{color: filterColor}">-->
+            <!--<li @click="insertText('# Title\n')">-->
+              <!--<h1>H1</h1>-->
+            <!--</li>-->
+            <!--<li @click="insertText('## Title\n')">-->
+              <!--<h2>H2</h2>-->
+            <!--</li>-->
+            <!--<li @click="insertText('### Title\n')">-->
+              <!--<h3>H3</h3>-->
+            <!--</li>-->
+            <!--<li @click="insertText('#### Title\n')">-->
+              <!--<h4>H4</h4>-->
+            <!--</li>-->
+            <!--<li @click="insertText('##### Title\n')">-->
+              <!--<h5>H5</h5>-->
+            <!--</li>-->
+          <!--</ul>-->
+        <!--</VmMarkdownDropdown>-->
+      <!--</VmMarkdownButton>-->
+      <VmMarkdownButton icon="iconfont icon-heading" @click.native="insertText(' # Title\n ')"></VmMarkdownButton>
       <VmMarkdownButton icon="iconfont icon-bold" @click.native="insertText(' **Bold** ')"></VmMarkdownButton>
       <VmMarkdownButton icon="iconfont icon-italic" @click.native="insertText(' *Italic* ')"></VmMarkdownButton>
       <VmMarkdownButton icon="iconfont icon-strikethrough" 
@@ -51,7 +52,7 @@
     </div>
   </div>
 </template>
-<style lang="scss">
+<style lang="scss" rel="stylesheet/scss">
   .vm-editor-menu{
     display: flex;
     height: 40px;
