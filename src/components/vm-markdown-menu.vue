@@ -139,7 +139,7 @@ export default {
       this.$emit('textChange', content.value)
     },
     uploadTable(content){
-      this.$emit('textChange', content)
+      this.$emit('textChange', content ,this.id)
     }
   },
   mounted () {
