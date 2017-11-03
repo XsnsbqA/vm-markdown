@@ -26,25 +26,23 @@
       <VmMarkdownButton icon="iconfont icon-heading" @click.native="insertText(' # Title\n ')"></VmMarkdownButton>
       <VmMarkdownButton icon="iconfont icon-bold" @click.native="insertText(' **Bold** ')"></VmMarkdownButton>
       <VmMarkdownButton icon="iconfont icon-italic" @click.native="insertText(' *Italic* ')"></VmMarkdownButton>
-      <VmMarkdownButton icon="iconfont icon-strikethrough" 
-                        @click.native="insertText(' ~~Strikethrough~~ ')">                
-      </VmMarkdownButton>
+
       <VmMarkdownButton icon="iconfont icon-ol" @click.native="insertText('1. Ordered List\n')"></VmMarkdownButton>
       <VmMarkdownButton icon="iconfont icon-ul" @click.native="insertText('- Unordered List\n')"></VmMarkdownButton>
-      <VmMarkdownButton icon="iconfont icon-quote"  @click.native="insertText(' > Blockquote\n\n')"></VmMarkdownButton>
-      <VmMarkdownButton icon="iconfont icon-code" @click.native="insertText('```\nCode\n```\n')"></VmMarkdownButton>
+      <!--<VmMarkdownButton icon="iconfont icon-quote"  @click.native="insertText(' > Blockquote\n\n')"></VmMarkdownButton>-->
+      <!--<VmMarkdownButton icon="iconfont icon-code" @click.native="insertText('```\nCode\n```\n')"></VmMarkdownButton>-->
       <VmMarkdownButton icon="iconfont icon-table">
         <VmMarkdownTable :hoverColor="bgMenu"
                          @textChange="uploadTable">
         </VmMarkdownTable>
       </VmMarkdownButton>
-      <VmMarkdownButton icon="iconfont icon-image" 
-                        @click.native="insertText('![Logo](https://github.com/luosijie/Front-end-Blog/blob/master/img/logo_vmmarkdown_name.png?raw=true)\n')">
-      </VmMarkdownButton>
-      <VmMarkdownButton icon="iconfont icon-link" @click.native="insertText('[JesseLuo](https://github.com/luosijie)')"></VmMarkdownButton>
+      <!--<VmMarkdownButton icon="iconfont icon-image" -->
+                        <!--@click.native="insertText('![Logo](https://github.com/luosijie/Front-end-Blog/blob/master/img/logo_vmmarkdown_name.png?raw=true)\n')">-->
+      <!--</VmMarkdownButton>-->
+      <!--<VmMarkdownButton icon="iconfont icon-link" @click.native="insertText('[JesseLuo](https://github.com/luosijie)')"></VmMarkdownButton>-->
       <VmMarkdownButton icon="iconfont icon-line" @click.native="insertText('***\n')"></VmMarkdownButton>
     </div>
-    <div class="vm-markdown-layout">
+    <div class="vm-markdown-layout" :id="id">
       <VmMarkdownButton icon="iconfont icon-layout-default" layout="default"></VmMarkdownButton>
       <VmMarkdownButton icon="iconfont icon-layout-right" layout="right"></VmMarkdownButton>
       <VmMarkdownButton icon="iconfont icon-layout-left" layout="left"></VmMarkdownButton>
@@ -119,6 +117,10 @@ export default {
     hoverColor: {
       type: String,
       default:'#232323'
+    },
+    id:{
+      type:String,
+      default:''
     }
   },
   computed: {

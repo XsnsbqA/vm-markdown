@@ -23,11 +23,25 @@
       <span data-theme="princess"></span>
     </div>
     <h4>theme = "<span class="theme-type">default</span>"</h4>
-    <VmMarkdown :theme="theme" 
-                width="1000px" 
-                height="800px" 
+
+    <VmMarkdown :theme="theme"
                 v-on:gethtml="showHtml"
                 class="markdown"
+                :editable="false"
+                id="0"
+                :defaultText="intro">
+    </VmMarkdown>
+    <VmMarkdown :theme="theme"
+                v-on:gethtml="showHtml"
+                class="markdown"
+                id="1"
+                layout="left"
+                :defaultText="intro">
+    </VmMarkdown>
+    <VmMarkdown :theme="theme"
+                v-on:gethtml="showHtml"
+                class="markdown"
+                id="2"
                 :defaultText="intro">
     </VmMarkdown>
     <div class="author">
@@ -50,7 +64,7 @@ export default {
   },
   data: function () {
     return {
-      theme: 'default',
+      theme: 'gray',
       intro: intro
     }
   },
@@ -76,7 +90,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" rel="stylesheet/scss">
 // @import url('./assets/iconfont/iconfont.css');
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
