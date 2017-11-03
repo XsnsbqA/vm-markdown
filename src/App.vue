@@ -13,6 +13,7 @@
                 v-on:gethtml="showHtml"
                 class="markdown"
                 id="1"
+                height="300px"
                 layout="left"
                 :defaultText="intro">
     </VmMarkdown>
