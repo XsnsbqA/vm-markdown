@@ -246,8 +246,8 @@
                   VmMarkdownEdit.style.width = '100%'
                   break;
                 case 'left' :
-                  VmMarkdownEdit.style.width = 'auto'
-                  VmMarkdownArea.style.display = 'hidden'
+                  VmMarkdownArea.style.width = 'auto'
+                  VmMarkdownEdit.style.width = '0'
                   break;
                 case 'zoom' :
                   if (VmMarkdown.style.position === 'fixed') {
