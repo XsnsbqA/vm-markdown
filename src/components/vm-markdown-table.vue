@@ -4,7 +4,7 @@
     </ul>
   </VmMarkdownDropdown>
 </template>
-<style lang="scss">
+<style lang="scss" rel="stylesheet/scss">
   ul.vm-markdown-table{
     margin: 3px;
     width: 160px;

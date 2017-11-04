@@ -2,27 +2,15 @@
   <div id="app">
 
 
+
     <VmMarkdown :theme="theme"
                 v-on:gethtml="showHtml"
                 class="markdown"
-                :editable="false"
                 id="0"
-                :defaultText="intro">
+                height="500px"
+                defaultText="1">
     </VmMarkdown>
-    <VmMarkdown :theme="theme"
-                v-on:gethtml="showHtml"
-                class="markdown"
-                id="1"
-                height="300px"
-                layout="left"
-                :defaultText="intro">
-    </VmMarkdown>
-    <VmMarkdown :theme="theme"
-                v-on:gethtml="showHtml"
-                class="markdown"
-                id="2"
-                :defaultText="intro">
-    </VmMarkdown>
+
     <div class="author">
       <a href="https://github.com/luosijie/vm-markdown">
         <i class="iconfont icon-github"></i>
