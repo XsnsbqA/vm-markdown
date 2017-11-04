@@ -105,7 +105,7 @@ export default {
         }
         ths += ' |\n'
         tls += ' |\n'
-        str += '\n' + ths + tls + tds
+        str += '\n\n' + ths + tls + tds
         this.insertText(str)
       }
     })

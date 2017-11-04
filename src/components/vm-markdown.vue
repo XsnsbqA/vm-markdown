@@ -69,6 +69,7 @@
                 padding: 15px;
                 overflow: auto;
                 flex-grow: 1;
+                font-size: 12px;
                 word-wrap: break-word;
                 ul {
                     margin: 10px 20px;
@@ -85,13 +86,13 @@
                     padding: 0;
                 }
                 hr {
-                    margin: 15px 0;
+                    margin: 10px 0;
                     border-top: 1px solid #eeeff1;
                 }
                 pre {
                     display: block;
                     margin: 10px 0;
-                    padding: 8px;
+                    padding: 5px;
                     border-radius: 4px;
                     background-color: #f2f2f2;
                     color: #656565;
@@ -117,12 +118,12 @@
                     border: 1px solid #eee;
                 }
                 th {
-                    padding: 8px 30px;
+                    padding: 5px 10px;
                     border-right: 1px solid #eee;
                     background-color: #f2f2f2;
                 }
                 td {
-                    padding: 8px 30px;
+                    padding: 5px 10px;
                     border-right: 1px solid #eee;
                 }
             }
@@ -279,7 +280,7 @@
       parseHtml () {
         let style = {
           ul: `
-              margin: 10px 20px;
+              margin: 1px 2px;
               list-style-type: square;
               padding: 0;
             `,
@@ -368,7 +369,7 @@
         this.htmlString = marked(value)
 
         setTimeout(() => {
-          this.parseHtml()
+//          this.parseHtml()
           this.getHtml()
         }, 0)
       }
