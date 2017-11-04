@@ -69,8 +69,12 @@
                 padding: 15px;
                 overflow: auto;
                 flex-grow: 1;
-                font-size: 12px;
+                font-size: 13px;
+                line-height: 28px;
                 word-wrap: break-word;
+                h1{
+                    font-size: 16px;
+                }
                 ul {
                     margin: 10px 20px;
                     list-style-type: square;

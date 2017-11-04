@@ -23,12 +23,12 @@
           <!--</ul>-->
         <!--</VmMarkdownDropdown>-->
       <!--</VmMarkdownButton>-->
-      <VmMarkdownButton icon="iconfont icon-heading" @click.native="insertText(' # Title\n ')"></VmMarkdownButton>
+      <VmMarkdownButton icon="iconfont icon-heading" @click.native="insertText(' \n# Title\n ')"></VmMarkdownButton>
       <VmMarkdownButton icon="iconfont icon-bold" @click.native="insertText(' **Bold** ')"></VmMarkdownButton>
       <VmMarkdownButton icon="iconfont icon-italic" @click.native="insertText(' *Italic* ')"></VmMarkdownButton>
 
       <VmMarkdownButton icon="iconfont icon-ol" @click.native="insertText('1. Ordered List\n')"></VmMarkdownButton>
-      <VmMarkdownButton icon="iconfont icon-ul" @click.native="insertText('- Unordered List\n')"></VmMarkdownButton>
+      <VmMarkdownButton icon="iconfont icon-ul" @click.native="insertText('\n- Unordered List\n')"></VmMarkdownButton>
       <!--<VmMarkdownButton icon="iconfont icon-quote"  @click.native="insertText(' > Blockquote\n\n')"></VmMarkdownButton>-->
       <!--<VmMarkdownButton icon="iconfont icon-code" @click.native="insertText('```\nCode\n```\n')"></VmMarkdownButton>-->
       <VmMarkdownButton icon="iconfont icon-table">
@@ -41,7 +41,7 @@
                         <!--@click.native="insertText('![Logo](https://github.com/luosijie/Front-end-Blog/blob/master/img/logo_vmmarkdown_name.png?raw=true)\n')">-->
       <!--</VmMarkdownButton>-->
       <!--<VmMarkdownButton icon="iconfont icon-link" @click.native="insertText('[JesseLuo](https://github.com/luosijie)')"></VmMarkdownButton>-->
-      <VmMarkdownButton icon="iconfont icon-line" @click.native="insertText('***\n')"></VmMarkdownButton>
+      <VmMarkdownButton icon="iconfont icon-line" @click.native="insertText('\n***\n')"></VmMarkdownButton>
     </div>
     <div class="vm-markdown-layout" :id="id">
       <VmMarkdownButton icon="iconfont icon-layout-default" layout="default"></VmMarkdownButton>
@@ -54,7 +54,7 @@
 <style lang="scss" rel="stylesheet/scss">
   .vm-editor-menu{
     display: flex;
-    height: 40px;
+    height: 35px;
     box-sizing: border-box;
     justify-content: space-between;
     align-items: center;
@@ -69,7 +69,7 @@
       display: inline-block;
       width: 1px;
       height: 40px;
-      margin: 0 10px;
+      margin: 0 0px;
       background-color: #eeeff1;
     }
   }
@@ -78,7 +78,7 @@
     margin: 0;
     li{
       margin: 0;
-      padding: 5px 30px;
+      padding: 5px 10px;
       display: flex;
       justify-content: center;
       &:hover{
